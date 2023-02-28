@@ -7,7 +7,7 @@ Dataset: https://www.kaggle.com/c/boston-housing
 
 [Shap](https://shap.readthedocs.io/en/latest/)
 
-pip install streamlit
-pip install shap
-pip install ipykernel
+pip install streamlit<br>
+pip install shap<br>
+pip install ipykernel<br>
 
