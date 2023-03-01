@@ -7,7 +7,22 @@ Dataset: https://www.kaggle.com/c/boston-housing
 
 [Shap](https://shap.readthedocs.io/en/latest/)
 
-pip install streamlit<br>
-pip install shap<br>
-pip install ipykernel<br>
 
+
+
+
+Steps:
+1) Create new virtual environment named "streamlitenv" <br>
+    (open) Anaconda Prompt <br>
+    (create) conda create -n streamlitenv <br>
+    (activate) conda activate streamlitenv <br>
+   
+   
+2) Install dependancies: <br>
+    pip install streamlit <br>
+    pip install pandas <br>
+    pip install shap <br>
+    pip instal matplotlib <br>
+    pip install sklearn <br>
+
+   
