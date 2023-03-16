@@ -16,6 +16,6 @@ https://brandonfailing.github.io/project-4/testing.html
 - Team 1 project's is building a movie recommender system using machine learning and a website that suggest movie recommendation using Content_Based Movie Recommendation Systems.
 
 - Software: Python, VSCode
-- Python Libraries: Pandas, Numpy
+- Python Libraries: Pandas, Numpy, Scikit, Flask
 - Unsupervised Machine Learning 
 -Javascript, HTML, Chart.JS
