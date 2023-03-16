@@ -1,8 +1,15 @@
 # Project 4: Movie Recommender 
 ## Team 1
 ### Edith Lotterman, Chloe Li, Brandon Failing, Wei Kent Chen
-https://brandonfailing.github.io/project-4
-<hr>
+Core Pages: <br>
+https://BrandonFailing.github.io/project-4/ <br>
+https://brandonfailing.github.io/project-4/index.html <br>
+https://brandonfailing.github.io/project-4/prediction-form.html <br>
+https://brandonfailing.github.io/project-4/prediction-result.html <br>
+<br>
+Test Pages: <br>
+https://brandonfailing.github.io/project-4/testing.html
+<br>
 
 ## Project Overview
 
