@@ -15,7 +15,20 @@ https://brandonfailing.github.io/project-4/testing.html
 
 Our project is building a movie recommendation system using a machine learning model that predicts similar movie recommendations, from a list of user selected movies, in a flask based web app.
 
-* Software: Python, VSCode
-* Python Libraries: Pandas, Numpy, Scikit, Flask, PySpark
-* Unsupervised Machine Learning 
-*Javascript, HTML, Chart.JS
+Software: <br>
+* Python
+* VSCode <br>
+Python Libraries: <br>
+* Pandas
+* Numpy
+* Scikit
+* Flask
+* PySpark <br>
+Unsupervised Machine Learning:
+* Javascript
+* Chart.JS  <br>
+Web App:
+* HTML
+* Javascript
+* CSS
+* Flask
