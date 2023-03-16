@@ -11,9 +11,6 @@ https://brandonfailing.github.io/project-4/index.html <br>
 https://brandonfailing.github.io/project-4/prediction-form.html <br>
 https://brandonfailing.github.io/project-4/prediction-result.html <br>
 <br>
-Test Pages: <br>
-https://brandonfailing.github.io/project-4/testing.html
-<br>
 
 ## Project Overview
 
