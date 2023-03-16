@@ -1,3 +1,4 @@
+<img src=/assets/movie-recommender-header.jpg>
 # Project 4: Movie Recommender 
 ## Team 1
 ### Edith Lotterman, Chloe Li, Brandon Failing, Wei Kent Chen
