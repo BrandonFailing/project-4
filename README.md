@@ -17,14 +17,14 @@ Our project is building a movie recommendation system using a machine learning m
 
 Software:
 * Python
-* VSCode
+* VSCode <p>
 <br>
 Python Libraries:
 * Pandas
 * Numpy
 * Scikit
 * Flask
-* PySpark
+* PySpark <p>
 <br>
 Unsupervised Machine Learning:
 * Javascript
