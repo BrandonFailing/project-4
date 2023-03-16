@@ -13,7 +13,7 @@ https://brandonfailing.github.io/project-4/testing.html
 
 ## Project Overview
 
-Team 1's project is building a movie recommendation system using machine learning and a web app that suggest similar movie recommendations from a list of user selected movies.
+Our project is building a movie recommendation system using a machine learning model that predicts similar movie recommendations, from a list of user selected movies, in a flask based web app.
 
 * Software: Python, VSCode
 * Python Libraries: Pandas, Numpy, Scikit, Flask, PySpark
