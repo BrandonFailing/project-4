@@ -15,10 +15,10 @@ https://brandonfailing.github.io/project-4/testing.html
 
 Our project is building a movie recommendation system using a machine learning model that predicts similar movie recommendations, from a list of user selected movies, in a flask based web app.
 
-Software: <br>
+Software:
 * Python
 * VSCode <br>
-Python Libraries: <br>
+Python Libraries:
 * Pandas
 * Numpy
 * Scikit
