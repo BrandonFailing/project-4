@@ -3,7 +3,6 @@
 <p>
 <p align="center">
 <img src=/assets/movie-recommender-header.jpg>
-<br>
 <h2 align="center">Team 1: Edith Lotterman, Chloe Li, Brandon Failing and Wei Kent Chen</h2></center>
 </p>
 Core Pages: <br>
