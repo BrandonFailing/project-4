@@ -6,7 +6,6 @@
 <h2 align="center">Team 1: Edith Lotterman, Chloe Li, Brandon Failing and Wei Kent Chen</h2></center>
 </p>
 Core Pages: <br>
-https://BrandonFailing.github.io/project-4/ <br>
 https://brandonfailing.github.io/project-4/index.html <br>
 https://brandonfailing.github.io/project-4/prediction-form.html <br>
 https://brandonfailing.github.io/project-4/prediction-result.html <br>
