@@ -15,12 +15,12 @@ https://brandonfailing.github.io/project-4/testing.html
 
 Our project is building a movie recommendation system using a machine learning model that predicts similar movie recommendations, from a list of user selected movies, in a flask based web app. <p>
 
-Software:
+<h3>Software:
 <ul>
 <li>Python
 <li>VSCode
 </ul>
-Python Libraries:
+<h3>Python Libraries:
 <ul>
 <li>Pandas
 <li>Numpy
@@ -28,12 +28,12 @@ Python Libraries:
 <li>Flask
 <li>PySpark
 </ul>
-Unsupervised Machine Learning:
+<h3>Unsupervised Machine Learning:
 <ul>
 <li>Javascript
 <li>Chart.JS
 </ul>
-Web App:
+<h3>Web App:
 <ul>
 <li>HTML
 <li>Javascript
