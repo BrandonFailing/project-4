@@ -1,6 +1,10 @@
-# Project 4: Movie Recommender 
-## Team 1
-### Edith Lotterman, Chloe Li, Brandon Failing, Wei Kent Chen
+<h1 align="center">Project 4: Movie Recommender Web App</h1)
+<br>
+<p>
+<p align="center">
+<img src=/assets/movie-recommender-header.jpg>
+<h2 align="center">Team 1: Edith Lotterman, Chloe Li, Brandon Failing and Wei Kent Chen</h2></center>
+</p>
 Core Pages: <br>
 https://BrandonFailing.github.io/project-4/ <br>
 https://brandonfailing.github.io/project-4/index.html <br>
