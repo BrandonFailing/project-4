@@ -18,7 +18,7 @@ Our project is building a movie recommendation system using a machine learning m
 Software:
 <ul>
 <li>Python
-<li>VSCode <p>
+<li>VSCode
 </ul>
 <br>
 Python Libraries:
@@ -27,13 +27,13 @@ Python Libraries:
 <li>Numpy
 <li>Scikit
 <li>Flask
-<li>PySpark <p>
+<li>PySpark
 </ul>
 <br>
 Unsupervised Machine Learning:
 <ul>
 <li>Javascript
-<li>Chart.JS <p>
+<li>Chart.JS
 </ul>
 <br>
 Web App:
@@ -41,6 +41,6 @@ Web App:
 <li>HTML
 <li>Javascript
 <li>CSS
-<li>Flask <p>
+<li>Flask
 </ul>
 <br>
