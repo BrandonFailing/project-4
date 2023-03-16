@@ -1,5 +1,6 @@
 <h1 align="center">Project 4: Movie Recommender Web App</h1)
 <br>
+<br>
 <p align="center">
 <img src=/assets/movie-recommender-header.jpg>
 <br>
