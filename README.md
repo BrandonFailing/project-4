@@ -17,16 +17,19 @@ Our project is building a movie recommendation system using a machine learning m
 
 Software:
 * Python
-* VSCode <br>
+* VSCode
+<br>
 Python Libraries:
 * Pandas
 * Numpy
 * Scikit
 * Flask
-* PySpark <br>
+* PySpark
+<br>
 Unsupervised Machine Learning:
 * Javascript
-* Chart.JS  <br>
+* Chart.JS
+<br>
 Web App:
 * HTML
 * Javascript
