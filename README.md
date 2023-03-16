@@ -20,7 +20,6 @@ Software:
 <li>Python
 <li>VSCode
 </ul>
-<br>
 Python Libraries:
 <ul>
 <li>Pandas
@@ -29,13 +28,11 @@ Python Libraries:
 <li>Flask
 <li>PySpark
 </ul>
-<br>
 Unsupervised Machine Learning:
 <ul>
 <li>Javascript
 <li>Chart.JS
 </ul>
-<br>
 Web App:
 <ul>
 <li>HTML
@@ -43,4 +40,3 @@ Web App:
 <li>CSS
 <li>Flask
 </ul>
-<br>
