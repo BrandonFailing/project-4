@@ -13,7 +13,7 @@ https://brandonfailing.github.io/project-4/prediction-result.html <br>
 
 ## Project Overview
 
-Our project is building a movie recommendation system using a machine learning model that predicts similar movie recommendations, from a list of user selected movies, in a flask based web app. <p>
+Our project is to create a flask based movie recommenadtion web app that uses a machine learning model to predict similar movie recommendations from a list of user selected movies<p>
 
 <h3>Software:</h3>
 <ul>
