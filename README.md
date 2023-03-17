@@ -66,10 +66,10 @@ Our project is to create a flask based movie recommedation web app that uses a m
     <ol>
         <li>Use unsupervised clustering to group similar movies together based on extracted features</li>
     </ol>
- <li>Calculate Movie Similarity
+ <li>Recommendation model
     <ol>
-        <li>Calculate similarity between different movies based on features</li>
-        <li>Using cosine similarity, the similarity score can be used to determine movies that are similar to each other</li>
+        <li>Build a recommendation model using the clustered data</li>
+        <li>This project utilize Content-Based Filtering model</li>
     </ol>
  <li>Spark
     <ol>
