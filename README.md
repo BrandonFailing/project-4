@@ -55,6 +55,12 @@ Our project is to create a flask based movie recommedation web app that uses a m
  <li>Feature Extraction
     <ol>
         <li>Extract relevant features from the pre-processed data and create a set of features that will be used to create movie profiles</li>
+        <li>Train the recommendation model</li>
+    </ol>
+  <li>Dimensionality reduction
+    <ol>
+        <li>Use Principal Component Analysis(PCA) to reduce the dimensionality of the feature space</li>
+        <li>This will help iprove efficiency and accuracy of the recommendation model</li>
     </ol>
 <li>Build Movie Profiles
     <ol>
