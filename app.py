@@ -17,13 +17,14 @@ app = Flask(__name__)
 # create a flask route and actions
 
 
-@app.route('/predict', methods=['POST'])
+@app.route("/predict", methods=["GET", "POST"])
 def predict():
-    # get the selected value from the drop-down list
+    if request.method == "POST":
+        # get the selected value from the drop-down list
     input_value = request.form['dropdown']
 
     # make a prediction using the model
     prediction = model.predict(input_value)
 
     # return the prediction to the HTML page
-    return render_template('prediction-result.html', prediction=prediction)
+    return render_template('index.html', prediction=prediction)
