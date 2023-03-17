@@ -77,5 +77,38 @@ Our project is to create a flask based movie recommedation web app that uses a m
     <ol>
         <li>Deploy the model on the web application</li>
     </ol>
+    <br>
+    <br>
+    Requirements
+<b>Data Model Implementation (25 points)</b>
+
+- [X] A Python script initializes, trains, and evaluates a model (10 points)
+
+- [X] The data is cleaned, normalized, and standardized prior to modeling (5 points)
+
+- [X] The model utilizes data retrieved from SQL or Spark (5 points)
+
+- [X] The model demonstrates meaningful predictive power at least 75% classification accuracy or 0.80 R-squared. (5 points)
+
+<b>Data Model Optimization (25 points)</b>
+
+- [ ] The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)
+
+- [ ] Overall model performance is printed or displayed at the end of the script (10 points)
+
+<b>GitHub Documentation (25 points)</b>
+
+- [X] GitHub repository is free of unnecessary files and folders and has an appropriate .gitignore in use (10 points)
+
+- [X] The README is customized as a polished presentation of the content of the project (15 points)
+
+<b>Group Presentation (25 points)</b>
+- [X] All group members speak during the presentation. (5 points)
+
+- [X] Content, transitions, and conclusions flow smoothly within any time restrictions. (5 points)
+
+- [X] The content is relevant to the project. (10 points)
+
+- [X] The presentation maintains audience interest. (5 points)
 
 
