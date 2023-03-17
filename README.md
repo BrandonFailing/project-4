@@ -63,5 +63,5 @@ Our project is to create a flask based movie recommedation web app that uses a m
         <li>Split the data</li>
         <li>Improve the performance score</li>
         <li>Improve the model</li> 
-        <li>Recommedn movies</li>  
+        <li>Recommend movies</li>  
 
