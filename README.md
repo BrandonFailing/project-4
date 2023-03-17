@@ -8,9 +8,8 @@
 Core Pages: <br>
 
 https://brandonfailing.github.io/project-4/index.html <br>
-10
+https://brandonfailing.github.io/project-4/templates/index.html <br>
 https://brandonfailing.github.io/project-4/templates/prediction-form.html <br>
-11
 https://brandonfailing.github.io/project-4/templates/prediction-result.html <br>
 <br>
 
