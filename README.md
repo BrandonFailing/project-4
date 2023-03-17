@@ -56,6 +56,11 @@ Our project is to create a flask based movie recommedation web app that uses a m
     <ol>
         <li>Extract relevant features from the pre-processed data and create a set of features that will be used to create movie profiles</li>
     </ol>
+<li>Build Movie Profiles
+    <ol>
+        <li>Group movies with similar features together</li>
+        <li>Apply clustering algorithms to create groups of movies that share similar features</li>
+    </ol>
 <li>Spark
     <ol>
         <li>Load the data into PySpark</li>
