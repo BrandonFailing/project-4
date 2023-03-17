@@ -54,4 +54,14 @@ Our project is to create a flask based movie recommedation web app that uses a m
         <li>Load the data into PySpark</li>
         <li>Explore the data with Spark</li>
     </ol>
- <li>Visaulize the Data
+ <li>Visualize the Data
+ <li>Build the recommender system
+      <ol>
+        <li>Train the model</li>
+        <li>Run the model</li>
+        <li>Evaluate the model</li>
+        <li>Split the data</li>
+        <li>Improve the performance score</li>
+        <li>Improve the model</li> 
+        <li>Recommedn movies</li>  
+
