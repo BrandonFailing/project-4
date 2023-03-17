@@ -40,3 +40,7 @@ Our project is to create a flask based movie recommedation web app that uses a m
 <li>CSS
 <li>Flask
 </ul>
+
+
+# Steps 
+
