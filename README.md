@@ -43,9 +43,11 @@ Our project is to create a flask based movie recommedation web app that uses a m
 
 
 ## Steps
-<ol>
+<ul>
 <li>Load the Data
-    <li>-Download the data
+    <ol>
+        <li>Download the data</li>
+ 
 <li>Spark
   <li>Load the data into PySpark
   <li>Explore the data with Spark
