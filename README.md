@@ -71,10 +71,9 @@ Our project is to create a flask based movie recommedation web app that uses a m
         <li>Build a recommendation model using the clustered data</li>
         <li>This project utilize Content-Based Filtering model</li>
     </ol>
- <li>Spark
+ <li>Deploy the model 
     <ol>
-        <li>Load the data into PySpark</li>
-        <li>Explore the data with Spark</li>
+        <li>Deploy the model on the web application</li>
     </ol>
 
 
