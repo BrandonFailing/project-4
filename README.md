@@ -43,7 +43,7 @@ Our project is to create a flask based movie recommedation web app that uses a m
 
 
 ## Steps
-<ul>
+<ol>
 <li>Load the Data
     <ol>
         <li>Download the data</li>
