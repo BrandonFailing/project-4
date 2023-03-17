@@ -61,19 +61,15 @@ Our project is to create a flask based movie recommedation web app that uses a m
         <li>Group movies with similar features together</li>
         <li>Apply clustering algorithms to create groups of movies that share similar features</li>
     </ol>
+<li>Calculate Movie Similarity
+    <ol>
+        <li>Calculate similarity between different movies based on features</li>
+        <li>Using cosine similarity, the similarity score can be used to determine movies that are similar to each other</li>
+    </ol>
 <li>Spark
     <ol>
         <li>Load the data into PySpark</li>
         <li>Explore the data with Spark</li>
     </ol>
- <li>Visualize the Data
- <li>Build the recommender system
-      <ol>
-        <li>Train the model</li>
-        <li>Run the model</li>
-        <li>Evaluate the model</li>
-        <li>Split the data</li>
-        <li>Improve the performance score</li>
-        <li>Improve the model</li> 
-        <li>Recommend movies</li>  
+
 
