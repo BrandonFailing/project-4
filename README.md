@@ -50,6 +50,7 @@ Our project is to create a flask based movie recommedation web app that uses a m
     </ol>
  
 <li>Spark
-  <li>Load the data into PySpark
-  <li>Explore the data with Spark
+    <ol>
+        <li>Load the data into PySpark</li>
+        <li>Explore the data with Spark</li>
  <li>Visaulize the Data
