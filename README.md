@@ -43,37 +43,37 @@ Our project is to create a flask based movie recommedation web app that uses a m
 
 
 ## Steps
-<ol>
-<li>Load the Data
+ <ol>
+ <li>Load the Data
     <ol>
         <li>Download the data</li>
     </ol>
-<li>Data Pre-processing 
+ <li>Data Pre-processing 
     <ol>
         <li>Clean the data(Remove duplicates and missing values)</li>
     </ol>
  <li>Feature Extraction
     <ol>
         <li>Extract relevant features from the pre-processed data and create a set of features that will be used to create movie profiles</li>
+        <li>Train the recommendation model</li>
     </ol>
-<li>Build Movie Profiles
+ <li>Dimensionality reduction
     <ol>
-        <li>Group movies with similar features together</li>
-        <li>Apply clustering algorithms to create groups of movies that share similar features</li>
+        <li>Use Principal Component Analysis(PCA) to reduce the dimensionality of the feature space</li>
+        <li>This will help iprove efficiency and accuracy of the recommendation model</li>
     </ol>
-<li>Spark
+ <li>Clustering
     <ol>
-        <li>Load the data into PySpark</li>
-        <li>Explore the data with Spark</li>
+        <li>Use unsupervised clustering to group similar movies together based on extracted features</li>
     </ol>
- <li>Visualize the Data
- <li>Build the recommender system
-      <ol>
-        <li>Train the model</li>
-        <li>Run the model</li>
-        <li>Evaluate the model</li>
-        <li>Split the data</li>
-        <li>Improve the performance score</li>
-        <li>Improve the model</li> 
-        <li>Recommend movies</li>  
+ <li>Recommendation model
+    <ol>
+        <li>Build a recommendation model using the clustered data</li>
+        <li>This project utilize Content-Based Filtering model</li>
+    </ol>
+ <li>Deploy the model 
+    <ol>
+        <li>Deploy the model on the web application</li>
+    </ol>
+
 
