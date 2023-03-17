@@ -53,4 +53,5 @@ Our project is to create a flask based movie recommedation web app that uses a m
     <ol>
         <li>Load the data into PySpark</li>
         <li>Explore the data with Spark</li>
+    </ol>
  <li>Visaulize the Data
