@@ -31,24 +31,11 @@
         <br>
         <button id="mode-toggle" class="bi bi-sun"> Enable Dark Mode</button>
             <div class="container px-lg-5">
-                <form action="{{ url_for('predict') }}" method="POST">
-                    <label for="dropdown">Select a value:</label>
-                    <select id="dropdown" name="dropdown">
-                        <option value="value1">Value 1</option>
-                        <option value="value2">Value 2</option>
-                        <option value="value3">Value 3</option>
-                    </select>
-                    <br>
-                    <button type="submit">Predict</button>
-                </form>
-                
+                <iframe src="prediction-form.html" title="prediction-form"></iframe>
             </div>
-                    <div class="container px-lg-5">    
-                        <div id="result">{{ prediction }}</div>
+            <iframe src="prediction-result.html" title="prediction-result"></iframe>
                     </div>
-                            <div class="container px-lg-5">
-                                
-                            </div>
+                
 
         <!-- Footer-->
         <footer class="py-5 bg-dark">

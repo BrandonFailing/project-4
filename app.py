@@ -8,20 +8,29 @@ with open('./dataset/movies-cleaned.csv', 'r') as f:
     data = [row for row in reader]
 
 # load the trained model using a pickle file
-with open('model.pkl', 'rb') as f:
+with open('./dataset/model.pkl', 'rb') as f:
     model = pickle.load(f)
 
 # create flask app
 app = Flask(__name__)
 
-# create a flask route and actions
+# create a flask route for prediction form and actions
+
+
+@app.route('/')
+def index():
+    with open('./dataset/movies-cleaned.csv', 'r') as f:
+        reader = csv.DictReader(f)
+        data = [row for row in reader]
+
+    return render_template('prediction-form.html', data=data)
 
 
 @app.route("/predict", methods=["GET", "POST"])
 def predict():
     if request.method == "POST":
         # get the selected value from the drop-down list
-    input_value = request.form['dropdown']
+        input_value = request.form['dropdown']
 
     # make a prediction using the model
     prediction = model.predict(input_value)

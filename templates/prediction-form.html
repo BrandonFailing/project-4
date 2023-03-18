@@ -5,7 +5,7 @@
 </head>
 <body>
     <form action="{{ url_for('predict') }}" method="POST">
-        <label for="dropdown">Select a value:</label>
+        <label for="dropdown">Select a movie:</label>
         <select id="dropdown" name="dropdown">
             {% for row in data %}
                 <option value="{{ row['value'] }}">{{ row['name'] }}</option>

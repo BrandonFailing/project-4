@@ -4,6 +4,8 @@ import numpy as np
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score
+import pickle
+
 
 # 2) Load the CSV data: Next, you'll need to load your CSV data into a Pandas dataframe. You can use the read_csv() function to accomplish this. Here's an example code to read a CSV file named data.csv:
 data = pd.read_csv('./dataset/u.csv')
@@ -34,5 +36,9 @@ accuracy = accuracy_score(y_test, y_pred)
 print("Accuracy:", accuracy)
 
 # 6) Save the training data to a CSV file
-train_data = pd.concat([X_train, y_train], axis=1)
-train_data.to_csv('./dataset/trained_data.csv', index=False)
+#train_data = pd.concat([X_train, y_train], axis=1)
+#train_data.to_csv('./dataset/trained_data.csv', index=False)
+
+# 7) Save the training data to a Pickle  file
+with open('./dataset/model.pkl', 'wb') as f:
+    pickle.dump(knn, f)
