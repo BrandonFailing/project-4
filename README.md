@@ -5,15 +5,18 @@
 <img src=/assets/movie-recommender-header.jpg>
 <h2 align="center">Team 1: Edith Lotterman, Chloe Li, Brandon Failing and Wei Kent Chen</h2></center>
 </p>
+<br>
+<p>
 Core Pages: <br>
 
 https://brandonfailing.github.io/project-4/index.html <br>
 https://brandonfailing.github.io/project-4/templates/index.html <br>
 https://brandonfailing.github.io/project-4/templates/prediction-form.html <br>
 https://brandonfailing.github.io/project-4/templates/prediction-result.html <br>
+</p>
 <br>
-
-## Project Overview
+<p>
+<h1>Project Overview</h1>
 
 Our project is to create a flask based movie recommedation web app that uses a machine learning model to predict similar movie recommendations from a list of user selected movies<p>
 
@@ -42,44 +45,46 @@ Our project is to create a flask based movie recommedation web app that uses a m
 <li>CSS
 <li>Flask
 </ul>
-
-
-## Steps
- <ol>
- <li>Load the Data
-    <ol>
-        <li>Download the data</li>
-    </ol>
- <li>Data Pre-processing 
-    <ol>
-        <li>Clean the data(Remove duplicates and missing values)</li>
-    </ol>
- <li>Feature Extraction
-    <ol>
-        <li>Extract relevant features from the pre-processed data and create a set of features that will be used to create movie profiles</li>
-        <li>Train the recommendation model</li>
-    </ol>
- <li>Dimensionality reduction
-    <ol>
-        <li>Use Principal Component Analysis(PCA) to reduce the dimensionality of the feature space</li>
-        <li>This will help iprove efficiency and accuracy of the recommendation model</li>
-    </ol>
- <li>Clustering
-    <ol>
-        <li>Use unsupervised clustering to group similar movies together based on extracted features</li>
-    </ol>
- <li>Recommendation model
-    <ol>
-        <li>Build a recommendation model using the clustered data</li>
-        <li>This project utilize Content-Based Filtering model</li>
-    </ol>
- <li>Deploy the model 
-    <ol>
-        <li>Deploy the model on the web application</li>
-    </ol>
-    <br>
-    <br>
-    Requirements
+</p>
+<br>
+<p>
+<h1>Steps</h1>
+<ol>
+<li>Load the Data
+<ol>
+<li>Download the data</li>
+</ol>
+<li>Data Pre-processing 
+<ol>
+<li>Clean the data(Remove duplicates and missing values)</li>
+</ol>
+<li>Feature Extraction
+<ol>
+<li>Extract relevant features from the pre-processed data and create a set of features that will be used to create movie profiles</li>
+<li>Train the recommendation model</li>
+</ol>
+<li>Dimensionality reduction
+<ol>
+<li>Use Principal Component Analysis(PCA) to reduce the dimensionality of the feature space</li>
+<li>This will help iprove efficiency and accuracy of the recommendation model</li>
+</ol>
+<li>Clustering
+<ol>
+<li>Use unsupervised clustering to group similar movies together based on extracted features</li>
+</ol>
+<li>Recommendation model
+<ol>
+<li>Build a recommendation model using the clustered data</li>
+<li>This project utilize Content-Based Filtering model</li>
+</ol>
+<li>Deploy the model 
+<ol>
+<li>Deploy the model on the web application</li>
+</ol>
+</p>
+<br>
+<p>
+<h1>Requirements (Grading Rubric)</h1>
 <b>Data Model Implementation (25 points)</b>
 
 - [X] A Python script initializes, trains, and evaluates a model (10 points)
