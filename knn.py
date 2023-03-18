@@ -8,14 +8,14 @@ import pickle
 
 
 # 2) Load the CSV data: Next, you'll need to load your CSV data into a Pandas dataframe. You can use the read_csv() function to accomplish this. Here's an example code to read a CSV file named data.csv:
-data = pd.read_csv('./dataset/u.csv')
+data = pd.read_csv('./dataset/u-r1-movies-reordered.csv')
 
 # 3) Prepare the data: Before building the model, you'll need to prepare the data. This involves separating the features and the target variable. In addition, you'll need to split the data into training and testing sets. Here's an example code to accomplish this:
 
 # Use all columns as features
 X = data
 # Extract the target variable column
-y = data['rating']
+y = data['name']
 # Split the data into training and testing sets
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42)
@@ -40,5 +40,5 @@ print("Accuracy:", accuracy)
 #train_data.to_csv('./dataset/trained_data.csv', index=False)
 
 # 7) Save the training data to a Pickle  file
-with open('./dataset/model.pkl', 'wb') as f:
+with open('./dataset/model-r1.pkl', 'wb') as f:
     pickle.dump(knn, f)

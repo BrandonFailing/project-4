@@ -13,11 +13,11 @@ with open('./dataset/model.pkl', 'rb') as f:
 
 @app.route('/', methods=['GET'])
 def home():
-    with open('./dataset/movies-cleaned.csv', 'r') as f:
+    with open('./dataset/movies-cleaned.csv', 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         movies = [row for row in reader]
 
-    return render_template('./templates/prediction-form.html', movies=movies)
+    return render_template('index.html', movies=movies)
 
 # Define the prediction route that makes a prediction based on the user's selection
 
@@ -31,8 +31,8 @@ def predict():
     # Call the machine learning model to make a prediction
     prediction = model.predict(selected_movie)
 
-    return render_template('./templates/prediction-result.html', prediction=prediction)
+    return render_template('index.html', prediction=prediction)
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
