@@ -1,20 +1,18 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Movie Recommendations</title>
-  </head>
-  <body>
-    <h1>Movie Recommendations</h1>
-    <form method="POST" action="/recommendations">
-      <label for="movie">Select a movie:</label>
-      <select id="movie" name="movie">
-        {% for movie in movies %}
-        <option value=`{{ movie }}``>{{ movie }}</option>
-        {% endfor %}
-      </select>
-      <br><br>
-      <input type="submit" value="Get Recommendations">
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Team 1 ~ Movie Recommender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2><u>Content Based Movie Recommendation System</u></h2>
+    <div class="movie">
+      <form action="{{ url_for('main') }}" method="POST">
+        <input type="text" id="movie_name" name="movie_name" placeholder="Enter a full movie name" autocomplete="off" autocorrect="off" autocapitalize="word" required />
+        <input type="submit" id="submission_button" value="Submit"/>
     </form>
-    <div id="result">{{ prediction }}</div>
-  </body>
-</html> 
+  </div>
+  <p class="creds">Team 1 ~ Brandon Failing</p>
+</body>
+</html>

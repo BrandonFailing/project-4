@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Rating Predictor</title>
+</head>
+<body>
+    <div>
+    <h1>Movie Rating Predictor</h1>
+    <form action="/predict" method="POST">
+        <label for="name">Select a name:</label>
+        <select name="name" id="name">
+            {% for name in names %}
+            <option value=`{{ name }}`>{{ name }}</option>
+            {% endfor %}
+        </select>
+        <br><br>
+        <button type="submit">Predict</button>
+    </form>
+    </div>
+    <div>
+    <h1>Movie Rating Predictor</h1>
+    <p>You selected the name "{{ name }}".</p>
+    <p>The predicted similar movies for this movie is:</
+    </div>
+</body>
+</html>

@@ -1,70 +1,83 @@
 # Create a Flask app and import the necessary modules:
-from flask import Flask, render_template, request
-import csv
+import flask
 import pandas as pd
-from sklearn.neighbors import NearestNeighbors
+from sklearn.feature_extraction.text import TfidfVectorizer
+from sklearn.metrics.pairwise import cosine_similarity
 
-# Load the dataset
-data = pd.read_csv('./data/u-r1-movies-reordered.csv')
+app = flask.Flask(__name__, template_folder='templates')
 
-# Transform the data into a pivot table
-pivot = data.pivot_table(
-    index='name', columns='user_id', values='rating').fillna(0)
+data = pd.read_csv('./model/movielens-database-cleaned.csv')
 
-# Train the model using the pivot table
-model = NearestNeighbors(metric='cosine', algorithm='brute')
-model.fit(pivot)
+tfidf = TfidfVectorizer(stop_words='english', analyzer='word')
 
-# Create a Flask route to display a dropdown list of movies CSV column.
-app = Flask(__name__)
+# Construct the TF-IDF matrix by fitting & transforming the data
+tfidf_matrix = tfidf.fit_transform(data['soup'])
+print(tfidf_matrix.shape)
 
+# Construct cosine similarity matrix
+cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
+print(cosine_sim.shape)
 
-@app.route('/')
-def index():
-    movies = pd.read_csv('./data/u-movie-list.csv')['name'].tolist()
-    return render_template('index.html', movies=movies)
+data = data.reset_index()
+indices = pd.Series(data.index, index=data['title']).drop_duplicates()
 
-# Create a Flask route that will generate movie recommendations based on the selected movie.
+# Create array with all movie titles
+all_titles = [data['title'][i] for i in range(len(data['title']))]
 
 
-@app.route('/recommendations', methods=['POST'])
-def recommendations():
-    input_movie = request.form['movie']
-    # Get the user_id that rated the selected movie
-    user_id = data.loc[data['name'] == input_movie]['user_id'].iloc[0]
-    # Get the list of movies rated by the user
-    user_ratings = data.loc[data['user_id'] == user_id]
-    # Get the movies similar to the selected movie
-    if input_movie in pivot.index:
-        movie_idx = pivot.index.get_loc(input_movie)
-        if movie_idx >= 0 and movie_idx < len(pivot.index):
-            distances, indices = model.kneighbors(
-                pivot.iloc[movie_idx, :].values.reshape(1, -1), n_neighbors=10)
-            similar_movies = []
-            for i in range(len(distances[0])):
-                if i == 0:
-                    continue
+def get_recommendations(title):
+    global sim_scores
+    # Get the index of the movie that matches the title
+    idx = indices[title]
+    # Get the pairwise similarity scores of all movies with that movie
+    sim_scores = list(enumerate(cosine_sim[idx]))
+    # Sort the movies based on the similarity scores
+    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+    # Get the scores of the 10 most similar movies
+    sim_scores = sim_scores[1:11]
+    # print similarity scores
+    print("\n movieId      score")
+    for i in sim_scores:
+        print(i)
+
+    # Get the movie indices
+    movie_indices = [i[0] for i in sim_scores]
+
+    # return list of similar movies
+    return_df = pd.DataFrame(columns=['Title', 'Homepage'])
+    return_df['Title'] = data['title'].iloc[movie_indices]
+    return_df['Homepage'] = data['homepage'].iloc[movie_indices]
+    return_df['ReleaseDate'] = data['release_date'].iloc[movie_indices]
+    return return_df
+
+# Set up the main route
+
+
+@app.route('/', methods=['GET', 'POST'])
+def main():
+    if flask.request.method == 'GET':
+        return(flask.render_template('index.html'))
+
+    if flask.request.method == 'POST':
+        m_name = " ".join(flask.request.form['movie_name'].split())
+        if m_name not in all_titles:
+            return(flask.render_template('movie-not-found.html', name=m_name))
+        else:
+            result_final = get_recommendations(m_name)
+            names = []
+            homepage = []
+            releaseDate = []
+            for i in range(len(result_final)):
+                names.append(result_final.iloc[i][0])
+                releaseDate.append(result_final.iloc[i][2])
+                if(len(str(result_final.iloc[i][1])) > 3):
+                    homepage.append(result_final.iloc[i][1])
                 else:
-                    movie_title = pivot.index[indices[0][i]]
-                    similar_movies.append(movie_title)
-            # Get the list of movies rated by the user that are similar to the selected movie
-            recommended_movies = []
-            for movie in similar_movies:
-                if len(recommended_movies) == 0:
-                    recommended_movies.append(movie)
-                else:
-                    # Get the rating of the similar movie by the same user
-                    rating = user_ratings.loc[user_ratings['name']
-                                              == movie]['rating'].iloc[0]
-                    # Check if the movie has not already been recommended and has a higher rating than the selected movie
-                    if movie not in recommended_movies and rating > user_ratings.loc[user_ratings['name'] == input_movie]['rating'].iloc[0]:
-                        recommended_movies.append(movie)
-                if len(recommended_movies) == 3:
-                    break
-            return render_template('index.html', recommended_movies=recommended_movies)
-    else:
-        return render_template('index.html', error_message="The selected movie is not in the dataset.")
+                    homepage.append("#")
+
+            return flask.render_template('movie-found.html', movie_names=names, movie_homepage=homepage, search_name=m_name, movie_releaseDate=releaseDate, movie_simScore=sim_scores)
 
 
+# Run Flask app w/ debugging.
 if __name__ == '__main__':
     app.run(debug=True)
