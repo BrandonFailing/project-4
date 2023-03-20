@@ -2,7 +2,7 @@
 <br>
 <p>
 <p align="center">
-<img src=/assets/movie-recommender-header.jpg>
+<img src=./brandon/assets/movie-recommender-header.jpg>
 <h2 align="center">Team 1: Edith Lotterman, Chloe Li, Brandon Failing and Wei Kent Chen</h2></center>
 </p>
 <br>
