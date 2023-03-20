@@ -6,7 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 
 app = flask.Flask(__name__, template_folder='templates')
 
-data = pd.read_csv('./model/movielens-database-cleaned.csv')
+data = pd.read_csv('./edith/final-testing.csv')
 
 tfidf = TfidfVectorizer(stop_words='english', analyzer='word')
 
