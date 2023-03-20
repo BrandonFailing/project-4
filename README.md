@@ -7,15 +7,7 @@
 </p>
 <br>
 <p>
-Core Pages: <br>
 
-https://brandonfailing.github.io/project-4/index.html <br>
-https://brandonfailing.github.io/project-4/templates/index.html <br>
-https://brandonfailing.github.io/project-4/templates/prediction-form.html <br>
-https://brandonfailing.github.io/project-4/templates/prediction-result.html <br>
-</p>
-<br>
-<p>
 <h1>Project Overview</h1>
 
 Our project is to create a flask based movie recommedation web app that uses a machine learning model to predict similar movie recommendations from a list of user selected movies<p>
