@@ -1,0 +1,232 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Sen:wght@400;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <title>Movie Design</title>
+</head>
+
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container">
+                <h3 class="logo">Team 1</h3>
+            </div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item active">Home</li>
+                    
+
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="/static/img/team1.png" alt="">
+                <div class="profile-text-container">
+                    
+                </div>
+                <div class="toggle">
+                    <i class="fas fa-moon toggle-icon"></i>
+                    <i class="fas fa-sun toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content">
+                <div class="movie" style="display:block; text-align:center;">
+                    <form action="{{ url_for('main') }}" method="POST">
+                      <input type="text" id="movie_name" name="movie_name" placeholder="Enter a full movie name" autocomplete="off" autocorrect="off" required />
+                      <input type="submit" id="submission_button" value="Submit"/>
+                  </form>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/wakanda.jpg" alt="">
+                            <span class="movie-list-item-title">Wakanda Forever</span>
+                            
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Star Wars.jpeg" alt="">
+                            <span class="movie-list-item-title">Star Wars</span>
+                          
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/blackadam.jpg" alt="">
+                            <span class="movie-list-item-title">Black Adam</span>
+                       
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/doctorstrange.jpg" alt="">
+                            <span class="movie-list-item-title">Doctor Strange</span>
+                            
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Avengers.jpg" alt="">
+                            <span class="movie-list-item-title">Avengers</span>
+                           
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/fb3.jpg" alt="">
+                            <span class="movie-list-item-title">Fantastic Beasts 3</span>
+                          
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/thor.jpg" alt="">
+                            <span class="movie-list-item-title">Thor: Love and Thunder</span>
+                           
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Oblivion.jpg" alt="">
+                            <span class="movie-list-item-title">Oblivion</span>
+                            
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/The Hobbit.jpg" alt="">
+                            <span class="movie-list-item-title">The Hobbit</span>
+                          
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Due Date.jpg" alt="">
+                            <span class="movie-list-item-title">Due Date</span>
+                     
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Fall.jpg" alt="">
+                            <span class="movie-list-item-title">Fall</span>
+                          
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Babylon.jpg" alt="">
+                            <span class="movie-list-item-title">Babylon</span>
+                          
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Jurrasic.jpg" alt="">
+                            <span class="movie-list-item-title">Jurrasic World</span>
+                           
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/blackadam.jpg" alt="">
+                            <span class="movie-list-item-title">Black Adam</span>
+                          
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="featured-content">
+              
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/secretheadquarters.jpg" alt="">
+                            <span class="movie-list-item-title">The Secret Headquarters</span>
+                        
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Star Wars.jpeg" alt="">
+                            <span class="movie-list-item-title">Star Wars</span>
+                            
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Lego Batman.jpg" alt="">
+                            <span class="movie-list-item-title">Batman Lego</span>
+                         
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Storm.jpg" alt="">
+                            <span class="movie-list-item-title">Storm</span>
+                            
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/4.jpg" alt="">
+                            <span class="movie-list-item-title">1917</span>
+                          
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Avengers.jpg" alt="">
+                            <span class="movie-list-item-title">Avengers</span>
+                           
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Top Gun.jpg" alt="">
+                            <span class="movie-list-item-title">Top Gun</span>
+                       
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">NEW RELEASES</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Aquaman.jpg" alt="">
+                            <span class="movie-list-item-title">Aquaman</span>
+                           
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Bullet Train.jpg" alt="">
+                            <span class="movie-list-item-title">Bullet Train</span>
+                          
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Spiderman.jpg" alt="">
+                            <span class="movie-list-item-title">Spider-man</span>
+                            
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Jurrasic.jpg" alt="">
+                            <span class="movie-list-item-title">Jurrasic World</span>
+                       
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Samaritan.jpg" alt="">
+                            <span class="movie-list-item-title">Samaritan</span>
+                            
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Top Gun.jpg" alt="">
+                            <span class="movie-list-item-title">Top Gun</span>
+                           
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="/static/img/Thor.jpg" alt="">
+                            <span class="movie-list-item-title">Thor: Love and Thunder</span>
+                          
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right arrow"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/app.js"></script>
+</body>
+
+</html>
