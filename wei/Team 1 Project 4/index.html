@@ -54,6 +54,12 @@
                 <img class="featured-title" src="img/lotr.jpg" alt="">
                 <p class="featured-desc">The Lord of the Rings is the best ever movie created.</p>
                 <button class="featured-button">WATCH</button>
+                <div class="movie">
+                    <form action="{{ url_for('main') }}" method="POST">
+                      <input type="text" id="movie_name" name="movie_name" placeholder="Enter a full movie name" autocomplete="off" autocorrect="off" required />
+                      <input type="submit" id="submission_button" value="Submit"/>
+                  </form>
+                </div>
             </div>
             <div class="movie-list-container">
                 <h1 class="movie-list-title">NEW RELEASES</h1>
