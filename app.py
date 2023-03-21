@@ -1,54 +1,48 @@
 # Create a Flask app and import the necessary modules:
 import flask
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
+import numpy as np
+from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 app = flask.Flask(__name__, template_folder='templates')
 
-data = pd.read_csv('./model/movielens-database-cleaned-1.csv')
+data = pd.read_csv('./model/movielens-database.csv')
 
-tfidf = TfidfVectorizer(stop_words='english', analyzer='word')
+# Create model
+cv = CountVectorizer()
 
-# Construct the TF-IDF matrix by fitting & transforming the data
-tfidf_matrix = tfidf.fit_transform(data['soup'])
-print(tfidf_matrix.shape)
+# Construct the count vectorizer matrix by fitting & transforming the data
+count_matrix = cv.fit_transform(data['combined_text'])
+print("Count Matrix:", count_matrix.toarray())
 
 # Construct cosine similarity matrix
-cosine_sim = cosine_similarity(tfidf_matrix, tfidf_matrix)
-print(cosine_sim.shape)
-
-data = data.reset_index()
-indices = pd.Series(data.index, index=data['title']).drop_duplicates()
+cosine_sim = cosine_similarity(count_matrix)
 
 # Create array with all movie titles
 all_titles = [data['title'][i] for i in range(len(data['title']))]
 
 
 def get_recommendations(title):
-    global sim_scores
     # Get the index of the movie that matches the title
-    idx = indices[title]
+    movie_index = data[data.title == title].index.values[0]
     # Get the pairwise similarity scores of all movies with that movie
-    sim_scores = list(enumerate(cosine_sim[idx]))
+    sim_scores = list(enumerate(cosine_sim[movie_index]))
     # Sort the movies based on the similarity scores
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
     # Get the scores of the 10 most similar movies
     sim_scores = sim_scores[1:11]
-    # print similarity scores
-    print("\n movieId      score")
-    for i in sim_scores:
-        print(i)
-
     # Get the movie indices
     movie_indices = [i[0] for i in sim_scores]
+    # Create returns_df for use in app route
+    name_list = []
 
-    # return list of similar movies
-    return_df = pd.DataFrame(columns=['Title', 'Homepage'])
-    return_df['Title'] = data['title'].iloc[movie_indices]
-    return_df['Homepage'] = data['homepage'].iloc[movie_indices]
-    return_df['ReleaseDate'] = data['release_date'].iloc[movie_indices]
-    return return_df
+    for movie in movie_indices:
+        name = data[data.index == movie]["title"].values[0]
+        name_list.append(name)
+
+    returns_df = pd.DataFrame(name_list, columns=['Title'])
+    return returns_df
 
 # Set up the main route
 
@@ -65,17 +59,10 @@ def main():
         else:
             result_final = get_recommendations(m_name)
             names = []
-            homepage = []
-            releaseDate = []
             for i in range(len(result_final)):
                 names.append(result_final.iloc[i][0])
-                releaseDate.append(result_final.iloc[i][2])
-                if(len(str(result_final.iloc[i][1])) > 3):
-                    homepage.append(result_final.iloc[i][1])
-                else:
-                    homepage.append("#")
 
-            return flask.render_template('movie-found.html', movie_names=names, movie_homepage=homepage, search_name=m_name, movie_releaseDate=releaseDate, movie_simScore=sim_scores)
+            return flask.render_template('movie-found.html', movie_names=names, search_name=m_name)
 
 
 # Run Flask app w/ debugging.

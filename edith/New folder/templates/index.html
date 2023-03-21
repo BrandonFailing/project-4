@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Team 1 ~ Movie Recommender</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <h2><u>Content Based Movie Recommendation System</u></h2>
+    <div class="movie">
+      <form action="{{ url_for('main') }}" method="POST">
+        <input type="text" id="movie_name" name="movie_name" placeholder="Enter a full movie name" autocomplete="off" autocorrect="off" required />
+        <input type="submit" id="submission_button" value="Submit"/>
+    </form>
+  </div>
+  <p class="creds">Flask App by Brandon Failing</p>
+</body>
+</html>
