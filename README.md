@@ -2,7 +2,7 @@
 <br>
 <p>
 <p align="center">
-<img src=./brandon/assets/movie-recommender-header.jpg>
+<img src=https://cdn.technadu.com/wp-content/uploads/2017/12/Create-a-library-in-kodi-Featured.jpg>
 <h2 align="center">Team 1: Edith Lotterman, Chloe Li, Brandon Failing and Wei Kent Chen</h2></center>
 </p>
 <br>
@@ -44,34 +44,60 @@ Our project is to create a flask based movie recommedation web app that uses a m
 <ol>
 <li>Load the Data
 <ol>
-<li>Download the data</li>
+<li>Download the data from movie lens</li>
 </ol>
+<ol>
+<li>Compile the csv files with movie Id, title, user assigned tags, unique tag, ratings, genome scores, and imdb/tmdb score</li>
+</ol>  
 <li>Data Pre-processing 
 <ol>
-<li>Clean the data(Remove duplicates and missing values)</li>
+<li>Identify disrepancies</li>
+</ol>
+<ol>
+<li>Replace and eliminate duplicate data</li>
+</ol>
+<ol>
+<li>Remove missing data</li>
+</ol>
+<ol>
+<li>Merge and adjusting data using pandas</li>
+</ol>
+<li>Visualize Database Diagram
+<ol>
+<li>Create a diagram database using QuickDBD</li>
 </ol>
 <li>Feature Extraction
 <ol>
 <li>Extract relevant features from the pre-processed data and create a set of features that will be used to create movie profiles</li>
 <li>Train the recommendation model</li>
 </ol>
-<li>Dimensionality reduction
+<li>Load Dataset to AWS S3
 <ol>
-<li>Use Principal Component Analysis(PCA) to reduce the dimensionality of the feature space</li>
-<li>This will help iprove efficiency and accuracy of the recommendation model</li>
+<li>Processed dataset using PySpark </li>
+<li>Calculate and analyze the dataset</li>
+<li>Drop all tagId under 80% significance </li>
+<li>Load tags data and join tags into dataframe for use in model</li>
+<li>Combine all tags for each movie into a single value </li>
+<li>Load all other relevant data(ratings, genre, title_date, title</li>
+<li>Clean the data and analyze the data, replacing null value</li>
+<li>Combine the dataset into a single data frame</li>
 </ol>
-<li>Clustering
+<li>Create Model and visualize:
 <ol>
-<li>Use unsupervised clustering to group similar movies together based on extracted features</li>
+<li>As a count vector </li>
+<li>A count vector after being stemmed </li>
+<li>A TF-IDF vector</li>
 </ol>
 <li>Recommendation model
 <ol>
 <li>Build a recommendation model using the clustered data</li>
 <li>This project utilize Content-Based Filtering model</li>
+<li>Deploy the model on the web application using Flask and HTML</li>
 </ol>
 <li>Deploy the model 
 <ol>
-<li>Deploy the model on the web application</li>
+<li>Deploy the model(web application)</li>
+<li>Test the web application to ensure that it works</li>
 </ol>
 </p>
 <br>
