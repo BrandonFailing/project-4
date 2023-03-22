@@ -2,7 +2,7 @@
 <br>
 <p>
 <p align="center">
-<img src=https://cdn.technadu.com/wp-content/uploads/2017/12/Create-a-library-in-kodi-Featured.jpg>
+<img src= "https://cdn.technadu.com/wp-content/uploads/2017/12/Create-a-library-in-kodi-Featured.jpg">  
 <h2 align="center">Team 1: Edith Lotterman, Chloe Li, Brandon Failing and Wei Kent Chen</h2></center>
 </p>
 <br>
@@ -50,7 +50,8 @@ Our project is to create a flask based movie recommedation web app that uses a m
 </ol>
 <ol>
 <li>Compile the csv files with movie Id, title, user assigned tags, unique tag, ratings, genome scores, and imdb/tmdb score</li>
-</ol>  
+</ol> 
+  
 <li>Data Pre-processing 
 <ol>
 <li>Identify disrepancies</li>
@@ -64,46 +65,77 @@ Our project is to create a flask based movie recommedation web app that uses a m
 <ol>
 <li>Merge and adjusting data using pandas</li>
 </ol>
+<ol>
+<li>Load dataset to AWS S3</li>
+</ol>
+  
 <li>Visualize Database Diagram
 <ol>
 <li>Create a diagram database using QuickDBD</li>
 </ol>
+  
 <li>Feature Extraction
 <ol>
-<li>Extract relevant features from the pre-processed data and create a set of features that will be used to create movie profiles</li>
-<li>Train the recommendation model</li>
+<li>Processes dataset using PySpark</li>
+<li>Load tags data, and drop all tags under 80% relevance</li>
+<li>Combine all tags for each movie into a single value
+<li>Load ratings data</li>
+<li>Calculate average ratings and ratings count for each movie</li>
+<li>Assign average ratings and ratings counts to categories to be 
+used in text analysis</li>
+<li>Load movies data</li>
+<li>Extract year from title and strip delimiter from genres</li>
+<li>Combine tags, average rating category, ratings count category, 
+year, and genres into a single text column for analysis.</li>
 </ol>
-<li>Load Dataset to AWS S3
+  
+
+<li>Create Model
 <ol>
-<li>Processed dataset using PySpark </li>
-<li>Calculate and analyze the dataset</li>
-<li>Drop all tagId under 80% significance </li>
-<li>Load tags data and join tags into dataframe for use in model</li>
-<li>Combine all tags for each movie into a single value </li>
-<li>Load all other relevant data(ratings, genre, title_date, title</li>
-<li>Clean the data and analyze the data, replacing null value</li>
-<li>Combine the dataset into a single data frame</li>
-</ol>
-<li>Create Model and visualize:
+<li>Using Scikit Count Vectorizer</li>
 <ol>
-<li>As a count vector </li>
-<li>A count vector after being stemmed </li>
-<li>A TF-IDF vector</li>
+<li>Create count matrix using Count Vectorizer to create 
+feature vectors</li>
+<li>Calculate cosine similarity</li>
+<li>Create input variable with movie</li>
+<li>Extract and print ten most similar movies to input movie</li>
 </ol>
+<li>Using Count Vectorizer after being stemmed
+<ol>
+<li>Use NLTK Snowball Stemmer to stem combined text 
+column</li>
+<li>Repeat steps above</li>
+<li>The stemmed text provides slightly higher similarity 
+scores, and a different set of recommendations</li>
+</ol>
+<li>Using a TF-IDF vector
+<ol>
+<li>Use stemmed field for analysis, and use Scikit TL-IDF 
+Vectorizer to create feature vector</li>
+<li>Repeat calculating cosine similarity and finding ten most 
+similar movies to input movie</li>
+<li>There is no significant difference between the Count
+Vectorizer and TL-IDF Vectorizer after stemming text field</li>
+</ol>
+  </ol>
+
+  
 <li>Recommendation model
 <ol>
 <li>Build a recommendation model using Flask app</li>
 <li>Create the Machine Learning model using count vectorizer</li>
 <ol>
-<li>Construct count vectorizer matrix by fitting and transforming data</li>
+<li>Construct count vectorizer matrix by fitting and 
+transforming data</li>
 <li>Construct cosine similarity matrix</li>
 </ol>
+
 <li>Create a Get Recommendations function
 <li>Run the Flask app</li>
 <li>Create a web page for the movie recommender using HTML and CSS </li>
 <li>Return HTML through Python script using the flask render_template method </li>
 <li>Create a movie-found.html that would render similar movie recommendations </li>
-  <li>Create a movie-not-found.html that would return <strong>"Error, movie("NAME")"</strong> not found if no movie recommendations are found </li>
+ <li>Create a movie-not-found.html that would return <strong>"Error, movie("NAME")"</strong> not found if no movie recommendations are found </li>
 </ol>
 </p>
 <br>
