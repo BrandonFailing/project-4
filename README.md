@@ -44,11 +44,27 @@ Our project is to create a flask based movie recommedation web app that uses a m
 <ol>
 <li>Load the Data
 <ol>
-<li>Download the data</li>
+<li>Download the data from movie lens</li>
 </ol>
+<ol>
+<li>Compile the csv files with movie Id, title, user assigned tags, unique tag, ratings, genome scores, and imdb/tmdb score</li>
+</ol>  
 <li>Data Pre-processing 
 <ol>
-<li>Clean the data(Remove duplicates and missing values)</li>
+<li>Identify disrepancies</li>
+</ol>
+<ol>
+<li>Replace and eliminate duplicate data</li>
+</ol>
+<ol>
+<li>Remove missing data</li>
+</ol>
+<ol>
+<li>Merge and adjusting data using pandas</li>
+</ol>
+<li>Visualize Database Diagram
+<ol>
+<li>Create a diagram database using QuickDBD</li>
 </ol>
 <li>Feature Extraction
 <ol>
