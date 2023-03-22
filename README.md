@@ -44,7 +44,7 @@ Our project is to create a flask based movie recommedation web app that uses a m
 <ol>
 <li>Load the Data
 <ol>
-<li>Download the data from movie lens</li>
+<li>Download the data from Grouplens</li>
 </ol>
 <ol>
 <li>Compile the csv files with movie Id, title, user assigned tags, unique tag, ratings, genome scores, and imdb/tmdb score</li>
@@ -90,14 +90,18 @@ Our project is to create a flask based movie recommedation web app that uses a m
 </ol>
 <li>Recommendation model
 <ol>
-<li>Build a recommendation model using the clustered data</li>
-<li>This project utilize Content-Based Filtering model</li>
-<li>Deploy the model on the web application using Flask and HTML</li>
-</ol>
-<li>Deploy the model 
+<li>Build a recommendation model using Flask app</li>
+<li>Create the Machine Learning model using count vectorizer</li>
 <ol>
-<li>Deploy the model(web application)</li>
-<li>Test the web application to ensure that it works</li>
+<li>Construct count vectorizer matrix by fitting and transforming data</li>
+<li>Construct cosine similarity matrix</li>
+</ol>
+<li>Create a Get Recommendations function
+<li>Run the Flask app</li>
+<li>Create a web page for the movie recommender using HTML and CSS </li>
+<li>Return HTML through Python script using the flask render_template method </li>
+<li>Create a movie-found.html that would render similar movie recommendations </li>
+  <li>Create a movie-not-found.html that would return <strong>"Error, movie("NAME")"</strong> not found if no movie recommendations are found </li>
 </ol>
 </p>
 <br>
