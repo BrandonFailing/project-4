@@ -153,9 +153,9 @@ transforming data</li>
 
 <b>Data Model Optimization (25 points)</b>
 
-- [ ] The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)
+- [X] The model optimization and evaluation process showing iterative changes made to the model and the resulting changes in model performance is documented in either a CSV/Excel table or in the Python script itself (15 points)
 
-- [ ] Overall model performance is printed or displayed at the end of the script (10 points)
+- [X] Overall model performance is printed or displayed at the end of the script (10 points)
 
 <b>GitHub Documentation (25 points)</b>
 
