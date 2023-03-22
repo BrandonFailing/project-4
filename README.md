@@ -2,7 +2,7 @@
 <br>
 <p>
 <p align="center">
-<img src=./brandon/assets/movie-recommender-header.jpg>
+<img src=https://cdn.technadu.com/wp-content/uploads/2017/12/Create-a-library-in-kodi-Featured.jpg>
 <h2 align="center">Team 1: Edith Lotterman, Chloe Li, Brandon Failing and Wei Kent Chen</h2></center>
 </p>
 <br>
