@@ -27,8 +27,10 @@ Our project is to create a flask based movie recommedation web app that uses a m
 </ul>
 <h3>Unsupervised Machine Learning:</h3>
 <ul>
-<li>Javascript
-<li>Chart.JS
+<li>Scikit Count Vectorizer
+<li>Scikit Cosime Similarity 
+<li>Scikit TL-IDF Vectorizer
+<li>NLTK Snowball Stemmer
 </ul>
 <h3>Web App:</h3>
 <ul>
